@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>COMBINEDMAX 2027</title>
+		<title>Manual Slideshow</title>
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
@@ -13,64 +13,64 @@
 
 			<div class="slideshow-container">
 				<!-- Slides -->
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 01.jpg" alt="Slide 1" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 02.jpg" alt="Slide 2" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 03.jpg" alt="Slide 3" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 04.jpg" alt="Slide 4" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 05.jpg" alt="Slide 5" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 06.jpg" alt="Slide 6" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 07.jpg" alt="Slide 7" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 08.jpg" alt="Slide 8" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 09.jpg" alt="Slide 9" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 10.jpg" alt="Slide 10" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 11.jpg" alt="Slide 11" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 12.jpg" alt="Slide 12" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 13.jpg" alt="Slide 13" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 14.jpg" alt="Slide 14" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 15.jpg" alt="Slide 15" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 16.jpg" alt="Slide 16" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 17.jpg" alt="Slide 17" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 18.jpg" alt="Slide 18" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 19.jpg" alt="Slide 19" />
 				</div>
-				<div class="slide fade">
+				<div class="slide fade" onclick="expandImage(this)">
 					<img src="images/Page 20.jpg" alt="Slide 20" />
 				</div>
 			</div>
@@ -82,6 +82,15 @@
 		<!-- Page count -->
 		<div class="page-counter">
 			<span id="pageNumber">Page 1 of 20</span>
+		</div>
+
+		<!-- Fullscreen Overlay (Initially Hidden) -->
+		<div
+			id="fullscreenOverlay"
+			class="fullscreen-overlay"
+			onclick="closeFullscreen()"
+		>
+			<img id="fullscreenImg" src="" alt="Expanded Image" />
 		</div>
 
 		<script src="script.js"></script>

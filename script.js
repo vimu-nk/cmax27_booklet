@@ -46,3 +46,20 @@ function showSlides(n) {
 	prevButton.style.display = n === 1 ? "none" : "block";
 	nextButton.style.display = n === slides.length ? "none" : "block";
 }
+
+// Expand Image on Mobile
+function expandImage(slide) {
+	if (window.innerWidth <= 768) {
+		// Only activate on mobile
+		let fullscreenOverlay = document.getElementById("fullscreenOverlay");
+		let fullscreenImg = document.getElementById("fullscreenImg");
+
+		fullscreenImg.src = slide.querySelector("img").src;
+		fullscreenOverlay.style.display = "flex";
+	}
+}
+
+// Close Fullscreen Image
+function closeFullscreen() {
+	document.getElementById("fullscreenOverlay").style.display = "none";
+}
