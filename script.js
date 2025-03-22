@@ -48,3 +48,16 @@ function showSlides(n) {
 	prevButton.style.display = n === 1 ? "none" : "block";
 	nextButton.style.display = n === slides.length ? "none" : "block";
 }
+
+function expandImage(element) {
+    let imgSrc = element.querySelector("img").src;
+    let fullscreenOverlay = document.getElementById("fullscreenOverlay");
+    let fullscreenImg = document.getElementById("fullscreenImg");
+
+    fullscreenImg.src = imgSrc;
+    fullscreenOverlay.style.display = "flex";
+}
+
+function closeFullscreen() {
+    document.getElementById("fullscreenOverlay").style.display = "none";
+}
